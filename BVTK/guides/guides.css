@@ -1,0 +1,161 @@
+.main_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* ------------------------------------------------------------------------------
+    ASIDE
+------------------------------------------------------------------------------ */
+
+.aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    display: inline-block;
+    background-color: #e6e7e8;
+    border-right: 1px solid #a7a9ab;
+}
+
+/* ------------------------------------------------------------------------------
+    ARTICLE
+------------------------------------------------------------------------------ */
+
+.article{
+    padding-left: 250px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* ------------------------------------------------------------------------------
+    ARTICLE HEADER
+------------------------------------------------------------------------------ */
+
+.article .header{
+    height: 50px;
+    padding: 15px;
+    position: relative;
+    border-bottom: 1px solid #a7a9ab;
+    background: rgb(255,70,70);
+    background: linear-gradient(90deg, rgba(255,70,70,1) 0%, rgb(255, 121, 56) 51%, rgba(255,85,66,1) 100%);
+    box-shadow: inset 0px -92px 35px -97px rgba(133, 0, 0, 0.51);
+}
+
+.article .header div{
+    vertical-align: middle;
+}
+
+.article .header .buttons_pill_bar{
+    height: 70%;
+}
+
+.article .header .logo{
+    display: inline-block;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #a7a9ab;
+    background-color: #f1f2f2;
+    border-radius: 100%;
+}
+
+.article .header .logo img{
+    height: 100%;
+}
+
+/* Buttons pill bar */
+
+.buttons_pill_bar{
+    display: inline-block;
+    border-radius: 500px;
+    border: 1px solid #a7a9ab;
+    background-color: #f1f2f2;
+    overflow: hidden;
+}
+.buttons_pill_bar>button{
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #a7a9ab;
+    font-family: Saira-Light, sans-serif;
+    font-size: 1.3em;
+}
+.buttons_pill_bar>button:hover, .article .header .logo:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+/* ------------------------------------------------------------------------------
+    ARTICLE CONTENT
+------------------------------------------------------------------------------ */
+
+.article .content{
+    padding: 30px 40px;
+    font-family: Saira-Thin, sans-serif;
+    font-size: 1.3em;
+}
+
+.article .text_block{
+    font-family: Saira-Thin, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    text-align: justify;
+}
+
+.article .title{
+    font-family: Posto-Regular, serif;
+    font-size: 50px;
+    background-color: #f1f2f2;
+    border-radius: 10px;
+    padding: 0 20px;
+    color: #212121;
+}
+
+.article .chapter{
+    margin: 20px 0;
+}
+
+.article .chapter_title{
+    font-family: Posto-Regular, serif;
+    font-size: 30px;
+    color: #212121;
+}
+
+/* ------------------------------------------------------------------------------
+    ELEMENTS
+------------------------------------------------------------------------------ */
+
+.file_pill{
+    cursor: pointer;
+    border: 1px solid #7f7f7f;
+    margin: 20px 0;
+    display: inline-block;
+    height: 60px;
+    border-radius: 60px;
+    background: rgb(241,242,242);
+    background: linear-gradient(0deg, rgba(241,242,242,1) 0%, rgb(210, 210, 210) 48%, rgba(241,242,242,1) 100%);
+}
+.file_pill div{
+    vertical-align: middle;
+}
+.file_pill>.img_box{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 12px;
+}
+.file_pill>.img_box>img{
+    height: 100%;
+}
+.file_pill>.text{
+    line-height: 100%;
+    display: inline-block;
+    padding-right: 17px;
+}
