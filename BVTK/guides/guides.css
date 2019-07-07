@@ -5,6 +5,14 @@
     bottom: 0;
     right: 0;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    outline: none;
+    transition: background-color 200ms;
+}
 
 /* ------------------------------------------------------------------------------
     ASIDE
@@ -19,6 +27,35 @@
     display: inline-block;
     background-color: #e6e7e8;
     border-right: 1px solid #a7a9ab;
+    color: #212121;
+}
+
+.aside_menu{
+    padding: 15px 15px;
+}
+
+.aside .aside_title{
+    font-family: Posto-Regular, serif;
+    font-size: 25px;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 10px 15px;
+}
+
+.aside .aside_menu button{
+    background-color: #d1d3d4;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 100%;
+    text-align: left;
+    font-family: Saira-Light, sans-serif;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.aside .aside_menu button:hover{
+    background-color: #bbbdbe;
 }
 
 /* ------------------------------------------------------------------------------
@@ -119,7 +156,7 @@
 }
 
 .article .chapter{
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 .article .chapter_title{
@@ -128,9 +165,42 @@
     color: #212121;
 }
 
+.article .content img{
+    max-width: 100%;
+}
+
+/* ------------------------------------------------------------------------------
+    ARTICLE IMAGES
+------------------------------------------------------------------------------ */
+
+.image_center, .image_outline{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #b3b3b3;
+}
+.image_center{
+    margin: 15px 0;
+    text-align: center;
+    background-color: #f1f2f2;
+}
+.image_center img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.w_600{
+    width: 600px;
+    /*margin: 10px 0;*/
+}
+.h_20{
+    height: 30px;
+}
+
+
 /* ------------------------------------------------------------------------------
     ELEMENTS
 ------------------------------------------------------------------------------ */
+
+/* file pill */
 
 .file_pill{
     cursor: pointer;
@@ -141,6 +211,15 @@
     border-radius: 60px;
     background: rgb(241,242,242);
     background: linear-gradient(0deg, rgba(241,242,242,1) 0%, rgb(210, 210, 210) 48%, rgba(241,242,242,1) 100%);
+    transition: background 500ms;
+}
+.file_pill.dark-pill{
+    background: rgb(70,70,70);
+    background: linear-gradient(0deg, rgba(70,70,70,1) 0%, rgba(31,31,31,1) 50%, rgba(70,70,70,1) 100%);
+    color: white;
+}
+.file_pill:hover{
+    background: linear-gradient(0deg, rgba(217,217,217,1) 0%, rgba(195,195,195,1) 48%, rgba(217,217,217,1) 100%);
 }
 .file_pill div{
     vertical-align: middle;
@@ -158,4 +237,33 @@
     line-height: 100%;
     display: inline-block;
     padding-right: 17px;
+}
+
+/* list point */
+
+.list_point{
+    background-color: #cecece;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+}
+
+/* ------------------------------------------------------------------------------
+    MARKERS
+------------------------------------------------------------------------------ */
+
+.outline_mark {
+    display: inline-block;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+/* ------------------------------------------------------------------------------
+    SPACERS
+------------------------------------------------------------------------------ */
+
+.hor_s_5{
+    display: inline-block;
+    width: 5px;
 }
