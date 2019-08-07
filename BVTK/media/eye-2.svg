@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.06046" height="34.06046" viewBox="0 0 34.06046 34.06046">
+  <defs>
+    <radialGradient id="a" data-name="Sfumatura senza nome 44" cx="17.03023" cy="18.96977" r="17.03023" gradientTransform="matrix(1, 0, 0, -1, 0, 36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.61028" stop-color="#f0f0f0"/>
+      <stop offset="0.84334" stop-color="#d6d6d6"/>
+      <stop offset="0.99913" stop-color="#b2b2b2"/>
+    </radialGradient>
+    <radialGradient id="b" data-name="Sfumatura senza nome 2" cx="17.03023" cy="18.96977" r="8.50239" gradientTransform="matrix(1, 0, 0, -1, 0, 36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.27105" stop-color="#fff"/>
+      <stop offset="0.3037" stop-color="#e7f5f4"/>
+      <stop offset="0.38433" stop-color="#b1dfdb"/>
+      <stop offset="0.45956" stop-color="#87cdc7"/>
+      <stop offset="0.52708" stop-color="#68c0b9"/>
+      <stop offset="0.58449" stop-color="#56b9b0"/>
+      <stop offset="0.62498" stop-color="#4fb6ad"/>
+      <stop offset="1" stop-color="#21a9e0"/>
+    </radialGradient>
+    <radialGradient id="c" data-name="Sfumatura senza nome 3" cx="20.58557" cy="23.20935" r="3.6703" gradientTransform="matrix(1, 0, 0, -1, 0, 36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.27105" stop-color="#fff"/>
+      <stop offset="0.34195" stop-color="#fff" stop-opacity="0.85675"/>
+      <stop offset="0.48016" stop-color="#fff" stop-opacity="0.59996"/>
+      <stop offset="0.61186" stop-color="#fff" stop-opacity="0.38584"/>
+      <stop offset="0.73325" stop-color="#fff" stop-opacity="0.21891"/>
+      <stop offset="0.84219" stop-color="#fff" stop-opacity="0.09904"/>
+      <stop offset="0.93475" stop-color="#fff" stop-opacity="0.02607"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="d" data-name="Sfumatura senza nome 4" cx="732.53748" cy="-927.37786" r="7.17911" gradientTransform="matrix(-1, 0, 0, 1, 745.03305, 949.40187)" xlink:href="#c"/>
+    <radialGradient id="e" data-name="Sfumatura senza nome 66" cx="17.03023" cy="18.96977" r="17.03023" gradientTransform="matrix(1, 0, 0, -1, 0, 36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.95473" stop-color="#b9b9b9" stop-opacity="0"/>
+      <stop offset="0.99913" stop-color="#878787"/>
+    </radialGradient>
+  </defs>
+  <title>eye-2</title>
+  <g>
+    <circle cx="17.03023" cy="17.03023" r="17.03023" style="fill: url(#a)"/>
+    <circle cx="17.03023" cy="17.03023" r="8.50239" style="fill: url(#b)"/>
+    <circle cx="17.03023" cy="17.03023" r="2.60921" style="fill: #010101"/>
+    <circle cx="21.29054" cy="11.92188" r="2.49915" style="fill: url(#c)"/>
+    <circle cx="11.11665" cy="23.72331" r="4.88834" transform="translate(-13.51892 14.80906) rotate(-45)" style="fill: url(#d)"/>
+    <circle cx="17.03023" cy="17.03023" r="17.03023" style="fill: url(#e)"/>
+  </g>
+</svg>

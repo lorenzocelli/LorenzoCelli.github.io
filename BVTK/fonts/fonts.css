@@ -19,3 +19,32 @@
     src: url('./saira/Saira-Thin.ttf');
     font-family: Saira-Thin;
 }
+@font-face {
+    src: url('./saira/Saira-Medium.ttf');
+    font-family: Saira-Medium;
+}
+
+/* ------------------------------------------------------------------------------
+    AILERON
+------------------------------------------------------------------------------ */
+
+@font-face {
+    src: url('aileron/Aileron-Black.otf');
+    font-family: Aileron-Black;
+}
+@font-face {
+    src: url('aileron/Aileron-Heavy.otf');
+    font-family: Aileron-Heavy;
+}
+@font-face {
+    src: url('aileron/Aileron-SemiBold.otf');
+    font-family: Aileron-SemiBold;
+}
+@font-face {
+    src: url('aileron/Aileron-Regular.otf');
+    font-family: Aileron-Regular;
+}
+@font-face {
+    src: url('aileron/Aileron-Thin.otf');
+    font-family: Aileron-Thin;
+}

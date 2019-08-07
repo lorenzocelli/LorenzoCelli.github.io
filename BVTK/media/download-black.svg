@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.63424" height="25.6653" viewBox="0 0 14.63424 25.6653">
+  <defs>
+    <linearGradient id="a" data-name="Sfumatura senza nome 7" x1="7.31712" y1="24.67535" x2="7.31712" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#221f20"/>
+      <stop offset="0.55832" stop-color="#221f20" stop-opacity="0.94489"/>
+      <stop offset="0.75939" stop-color="#221f20" stop-opacity="0.74524"/>
+      <stop offset="0.90225" stop-color="#221f20" stop-opacity="0.3992"/>
+      <stop offset="0.9995" stop-color="#221f20" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <title>download-black</title>
+  <polyline points="14.139 17.853 7.317 24.675 0.495 17.853" style="fill: none;stroke: #221f20;stroke-miterlimit: 10;stroke-width: 1.39999997615814px"/>
+  <line x1="7.31712" y1="24.67535" x2="7.31712" style="fill: none;stroke-miterlimit: 10;stroke-width: 1.39999997615814px;stroke: url(#a)"/>
+</svg>
