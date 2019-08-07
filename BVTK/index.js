@@ -41,7 +41,6 @@ $(window).resize(function(){
             if(is_open) return;
             header_bar.toggleClass("open_menu");
             header_bar.find(".button").each(function (i, item) {
-                console.log(item);
                 window.setTimeout(function () {
                     $(item).addClass("force_hover");
                 }, t * i);
@@ -93,11 +92,10 @@ $(window).on("scroll", stick);
     Thanks Gumbo
 ------------------------------------------------------------------------------ */
 
-function do_once(action_id) {
+function do_once(action_id, cb) {
     var cookie = getCookie(action_id);
-    console.log(cookie);
-    if(!cookie){
-        alert("Hola!");
+    if(! cookie){
+        cb();
         setCookie(action_id, 1, 500);
     }
 }

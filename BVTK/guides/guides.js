@@ -75,7 +75,6 @@ function check_paragraph_w() {
         var paragraph = item.find(".paragraph");
 
         var par_w = paragraph[0].offsetWidth;
-        console.log(par_w, paragraph_min_w);
 
         if(par_w < paragraph_min_w){
             item.addClass("break");
@@ -99,4 +98,11 @@ $(window).resize(function(){
 
 $(window).trigger("resize");
 
-do_once("pippo");
+do_once("i_1",function () {
+    $("#i_1").removeClass("hide");
+});
+const urlParams = new URLSearchParams(window.location.search);
+if(urlParams.get('fi')){
+    // User is coming from inside the website
+    $("#i_0").addClass("hide");
+}
