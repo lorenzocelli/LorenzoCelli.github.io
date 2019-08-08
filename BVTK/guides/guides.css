@@ -76,7 +76,14 @@ body{
     height: 350px;
     box-sizing: border-box;
     padding-top: 100px;
-    background: red url("../media/covers/default/default-cover.jpg") 80%/cover no-repeat;
+    background-color: red;
+    background-image: url("../media/covers/default/default-cover-0,25x.jpg");
+    background-position: 80%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
 }
 .light_highlight_title{
     color: white;

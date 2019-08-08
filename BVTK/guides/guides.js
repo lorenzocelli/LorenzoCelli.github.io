@@ -76,6 +76,24 @@ if(urlParams.get('fi')){
 }
 
 /* ------------------------------------------------------------------------------
+    ASYNC IMAGE LOADING
+------------------------------------------------------------------------------ */
+
+$(function () {
+    console.log($(".set_as_parent_bg"));
+    $(".set_as_parent_bg").on("load", function() {
+        console.log("hello");
+        var img = $(this);
+        var src = img.attr("src").toString();
+        var target = img.parent();
+        $(target).css("background-image", "url(" + src + ")");
+    }).each(function() {
+        if(this.complete) $(this).trigger("load");
+    });
+});
+
+
+/* ------------------------------------------------------------------------------
     INFO BOXES
 ------------------------------------------------------------------------------ */
 
@@ -88,8 +106,6 @@ function check_paragraph_w() {
         var paragraph = item.find(".paragraph");
 
         var par_w = paragraph[0].offsetWidth;
-
-        console.log(item[0], par_w, paragraph_min_w);
 
         if(par_w < paragraph_min_w){
             item.addClass("break");
