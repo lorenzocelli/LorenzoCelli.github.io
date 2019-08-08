@@ -73,11 +73,10 @@ body{
 .guide_cover{
     margin-top: 64px;
     position: relative;
-    background-color: red;
     height: 350px;
     box-sizing: border-box;
     padding-top: 100px;
-    background: url("../media/default-cover.jpg") center/cover no-repeat;
+    background: red url("../media/covers/default/default-cover.jpg") 80%/cover no-repeat;
 }
 .light_highlight_title{
     color: white;
