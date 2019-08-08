@@ -77,7 +77,7 @@ body{
     box-sizing: border-box;
     padding-top: 100px;
     background-color: red;
-    background-image: url("../media/covers/default/default-cover-0,25x.jpg");
+    background-image: url("../media/covers/default/default-cover-0.25x.jpg");
     background-position: 80%;
     background-size: cover;
     -webkit-background-size: cover;
