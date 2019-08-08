@@ -79,14 +79,30 @@ if(urlParams.get('fi')){
     ASYNC IMAGE LOADING
 ------------------------------------------------------------------------------ */
 
+function l_split(string, splitter) {
+    // Split string and return last element
+    string = string.split(splitter);
+    return string[string.length-1];
+}
+
+function eval_scale(src){
+    src = l_split(src, "/");
+    var ext = l_split(src, "x.");
+    src = src.replace("x."+ext, "");
+    src = l_split(src,"-").replace(",",".");
+    return parseFloat(src)
+}
+
 $(function () {
-    console.log($(".set_as_parent_bg"));
     $(".set_as_parent_bg").on("load", function() {
-        console.log("hello");
         var img = $(this);
         var src = img.attr("src").toString();
         var target = img.parent();
-        $(target).css("background-image", "url(" + src + ")");
+        var prev_src = $(target).css("background-image").split("url(")[1].split(")")[0];
+        prev_src = prev_src.substring(1, prev_src.length-1);
+        if(eval_scale(src) > eval_scale(prev_src)){
+            $(target).css("background-image", "url(" + src + ")");
+        }
     }).each(function() {
         if(this.complete) $(this).trigger("load");
     });
