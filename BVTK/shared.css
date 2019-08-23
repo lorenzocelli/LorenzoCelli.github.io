@@ -94,6 +94,12 @@ a{
 }
 
 /* ------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+    SPECIAL CONTAINERS
+---------------------------------------------------------------------------------
+------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------
     HEADER BAR
 ------------------------------------------------------------------------------ */
 
@@ -120,6 +126,60 @@ a{
 }
 #menu{
     display: none;
+}
+
+/* ------------------------------------------------------------------------------
+    PRESET TEMPLATE
+------------------------------------------------------------------------------ */
+
+.preset_template{
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+    background-color: var(--dark-gray);
+    overflow: hidden;
+}
+.preset_template > div{
+    vertical-align: top;
+}
+.preset_template > .image{
+    display: inline-block;
+    width: 600px;
+    border-right: 1px solid var(--light-gray);
+}
+.preset_template > .image > .header{
+    font-size: 18px;
+    /* See dropdown list header */
+}
+.preset_template > .image > img{
+    width: 100%;
+    vertical-align: top;
+}
+.preset_template > .body{
+    position: absolute;
+    right: 0;
+    left: 600px;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 25px 20px;
+}
+@media only screen and (max-width: 970px) {
+    .preset_template > .image{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    .preset_template > .body{
+        position: relative;
+        display: block;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        padding: 25px 20px;
+    }
 }
 
 /* ------------------------------------------------------------------------------
@@ -213,6 +273,12 @@ a{
     padding: 15px;
     transition: background-color 200ms;
 }
+.square_button.small{
+    padding: 10px;
+}
+.square_button.small > .icon{
+    height: 22px;
+}
 .square_button:hover{
     background-color: black;
 }
@@ -278,7 +344,7 @@ a{
     overflow: hidden;
     font-size: 18px;
 }
-.dropdown_list .dropdown_button.header{
+.dropdown_list .dropdown_button.header, .preset_template > .image .header{
     padding: 10px;
     font-family: Aileron-Regular, sans-serif;
     background-color: black;
