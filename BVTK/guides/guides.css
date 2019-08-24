@@ -7,7 +7,7 @@
     --dark-white: #a7a9ab;
     --light-black: #221f20;
     --gray-1: #eeeeee;
-    --gray-2: #bfbfbf;
+    --gray-2: #e3e3e3;
 }
 
 .main_container{
@@ -137,8 +137,18 @@ body{
     cursor: pointer;
     text-align: left;
     font-family: Aileron-Thin, sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     margin-bottom: 3px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.aside .aside_menu div > .n{
+    /* Menu entry number */
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 0;
 }
 
 .aside .aside_menu div:hover{
@@ -300,12 +310,35 @@ img.icon_20{
 
 /* list point */
 
+.list_box{
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+.list_box > .list_point{
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
 .list_point{
     background-color: #bfbfbf;
     display: inline-block;
     height: 8px;
     width: 8px;
     border-radius: 3px 1px;
+}
+
+/* simple mark */
+
+.mark {
+    display: inline-block;
+    background-color: var(--gray-1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 0 5px;
+    position: relative;
 }
 
 /* interactive mark */
@@ -337,7 +370,11 @@ img.icon_20{
     overflow: hidden;
     cursor: default;
     opacity: 0;
-    transition: opacity 300ms;
+    transition: opacity 300ms, display 300ms;
+    display: none;
+}
+.interactive_mark .interactive_content.w_100{
+    width: 100px;
 }
 .interactive_mark .interactive_content.left{
     right: -1px;
@@ -346,6 +383,7 @@ img.icon_20{
 }
 .interactive_mark.force_hover .interactive_content{
     opacity: 1;
+    display: block;
 }
 .interactive_mark .interactive_content img{
     width: 100%;
