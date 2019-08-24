@@ -376,6 +376,9 @@ img.icon_20{
 .interactive_mark .interactive_content.w_100{
     width: 100px;
 }
+.interactive_mark .interactive_content.w_180{
+    width: 180px;
+}
 .interactive_mark .interactive_content.left{
     right: -1px;
     left: auto;
