@@ -179,7 +179,8 @@ body{
 ------------------------------------------------------------------------------ */
 
 .article .content{
-    padding: 30px 50px 50px;
+    /*padding: 30px 50px 50px;*/
+    padding: 35px 20% 50px;
     font-family: Saira-Thin, sans-serif;
     font-size: 1.3em;
 }
