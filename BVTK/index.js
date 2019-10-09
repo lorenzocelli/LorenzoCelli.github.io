@@ -32,9 +32,10 @@ function click_blur(element, on_focus, on_blur, focus_event="click", blur_event=
 var header_bar = $(".header_bar");
 
 var t = 150;
+var collapse_width = 620;
 
 $(window).resize(function(){
-    if($(window).width() <= 620){
+    if($(window).width() <= collapse_width){
         click_blur(header_bar, function (e) {
             // Open
             var is_open = header_bar.hasClass("open_menu");
