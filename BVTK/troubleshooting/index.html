@@ -18,6 +18,15 @@
     <link rel="stylesheet" type="text/css" href="../shared.css">
     <title>BVTK</title>
     <style>
+        .code{
+            background: #ffffff05;
+            border: 1px solid #ffffff0a;
+            padding: 11px;
+            color: white;
+            font-family: Aileron-Thin, sans-serif;
+            border-radius: 3px;
+            letter-spacing: 1px;
+        }
         .descr_box_outlined {
             position: relative;
         }
@@ -135,35 +144,97 @@
         </div>
         <div class="ver_s_15"></div>
         <div class="descr_box">
-            <div class="title">Getting started</div>
+            <div class="title">Solution 1</div>
             <div class="content">
-                Basic guides to install BVTK and take the first steps.
-                <div class="ver_s_15"></div>
-                <div class="dropdown_list">
-                    <!--<div class="header dropdown_button">Install and run</div>-->
-                    <a href="get-started/update.html"><div class="dropdown_button first">How to update BVTK</div></a>
-                    <!--<div class="dropdown_button">How to run</div>-->
-                </div>
+                Sometimes to fix the problem is enough closing and reopening Blender, then repeat the
+                installation. Try doing this before going further, it could save you some time.
             </div>
         </div>
         <div class="ver_s_15"></div>
         <div class="descr_box">
-            <div class="title">Meteorological data</div>
+            <div class="title">Solution 2</div>
             <div class="content">
-                A few climate applications.
+                The first solution is to install VTK using pip on your Blender's Python.
+                These are the same commands that the BVTK add-on tries to perform automatically,
+                but running it in the terminal gives you a greater degree of freedom and permits
+                you to see what is the error that is actually impeding the installation.
+                So just open the terminal and run the commands, granting admin privileges if needed,
+                then wait and check if something goes wrong.
                 <div class="ver_s_15"></div>
-                <div class="dropdown_list">
-                    <div class="header dropdown_button">NetCDF format</div>
-                    <a href="net-cdf/open.html?fi=1"><div class="dropdown_button">How to open a netCDF file</div></a>
+                <div class="code">
+                    <span class="python_path"></span> -m ensurepip
+                </div>
+                <div class="ver_s_15"></div>
+                <div class="code">
+                    <span class="python_path"></span> -m pip install vtk
+                </div>
+                <div class="ver_s_15"></div>
+                If pip doesn't throw any error you can open Blender again and hopefully, you should
+                be able to enable the add-on without troubles.
+                Otherwise, if the VTK installation fails, since the error could be due to thousands of
+                things, you'll have to fix the problem by yourself. Most of the times the best strategy
+                is to search the error online and look for a solution.  If you can't get out of it,
+                you may skip to the third solution.
+            </div>
+        </div>
+        <div class="ver_s_15"></div>
+        <div class="descr_box">
+            <div class="title">Solution 3</div>
+            <div class="content">
+                The last solution you can try is to install on your machine the same Python version
+                running inside Blender, then install VTK on this new Python. The disadvantage is
+                that you will have to open Blender from the terminal each time you'll want to use
+                BVTK (in fact opening Blender from the graphical interface wouldn't import VTK)
+                <div class="ver_s_15"></div>
+                <div class="code">
+                    python3.5 -m ensurepip
+                </div>
+                <div class="ver_s_15"></div>
+                <div class="code">
+                    python3.5 -m pip install vtk
+                </div>
+                <div class="ver_s_15"></div>
+                If you manage to install VTK in this way you should be able to use BVTK, but only
+                opening Blender from the terminal.
+                <div id="suggest_path">
+                    To do so, open the prompt and type the following:
+                    <div class="ver_s_15"></div>
+                    <div class="code">
+                        <span class="blender_path"></span>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="ver_s_60"></div>
     </div>
     <script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../index.js"></script>
     <script type="text/javascript">
         collapse_width=680;
         $(window).trigger("resize");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const p_path_key = "python_path";
+        const b_path_key = "blender_path";
+
+        function replace_url_param(paramKey, failString) {
+            if(urlParams.has(paramKey))
+            {
+                $("."+paramKey).html(urlParams.get(paramKey));
+                return true;
+            }else
+            {
+                $("."+paramKey).html(failString);
+                return false
+            }
+        }
+
+        replace_url_param(p_path_key, "{{blender's python executable path}}");
+
+        $("#suggest_path").toggle(
+            replace_url_param(b_path_key, "{{blender executable path}}")
+        );
+
     </script>
 </div>
 </body>

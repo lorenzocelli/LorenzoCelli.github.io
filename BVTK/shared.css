@@ -656,6 +656,10 @@ img.icon_20{
     display: block;
     height: 30px;
 }
+.ver_s_60{
+    display: block;
+    height: 60px;
+}
 
 /* ------------------------------------------------------------------------------
     MEDIA RULES
