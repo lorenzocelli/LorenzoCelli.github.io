@@ -31,6 +31,10 @@ body{
 .ib{
     display: inline-block;
 }
+.paragraph{
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
 
 /* ------------------------------------------------------------------------------
     HEADER
@@ -314,12 +318,12 @@ img.icon_20{
     position: relative;
     width: 100%;
     padding-left: 15px;
-    margin-bottom: 3px;
+    margin: 5px 0;
 }
 .list_box > .list_point{
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 9px;
 }
 
 .list_point{

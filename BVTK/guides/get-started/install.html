@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="../../shared.css">
     <link rel="stylesheet" type="text/css" href="../guides.css">
-    <title>BVTK netCDF</title>
+    <title>BVTK installation</title>
 </head>
 <body>
 <div class="header_bar"><!--
@@ -25,7 +25,7 @@
      --><a href="../index.html"><div class="button last"><div class="eye_outline"><img src="../../media/light-eye.svg"></div><div>guides</div></div></a>
 </div>
 <div class="guide_cover">
-    <div class="light_highlight_title">How to update BVTK</div>
+    <div class="light_highlight_title">How to install BVTK</div>
     <img class="hide set_as_parent_bg" src="../../media/covers/default/default-cover-0.75x.jpg">
     <img class="hide set_as_parent_bg" src="../../media/covers/default/default-cover-1x.jpg">
 </div>
@@ -37,10 +37,9 @@
             <rect x="6" width="14" height="73.45064" style="fill: none"/>
         </svg>
         <div class="aside_menu">
-            <a href="#ch1"><div><div class="n">1.</div> Prerequisites</div></a>
-            <a href="#ch2"><div><div class="n">2.</div> Download</div></a>
-            <a href="#ch3"><div><div class="n">3.</div> Remove the previous version</div></a>
-            <a href="#ch4"><div><div class="n">4.</div> Install the new version</div></a>
+            <a href="#ch1"><div>1. Requirements</div></a>
+            <a href="#ch2"><div>2. Install the add-on</div></a>
+            <a href="#ch3"><div>3. Load data</div></a>
         </div>
     </div>
     <div class="article">
@@ -57,21 +56,42 @@
                 </div>
             </div>
             <div class="chapter">
-                <div class="chapter_title" id="ch1">1. Prerequisites</div>
+                <div class="chapter_title" id="ch1">1. Requirements</div>
                 <div class="paragraph">
-                    Since this is an update guide, we'll assume that you have already installed all the required software, most importantly VTK, and that you know how to launch blender
-                    from the terminal.
+                    In order to install and use BVTK, you will need to download if you don't have them already, two things:
+                    the Blender application (version 2.79) and the BVTK zipped file. You just need to click on these two links
+                    below. Don't unzip the BVTK file, if it is automatically unzipped you will have to zip it again.
+                </div>
+                <a href="https://download.blender.org/release/Blender2.79/" target="_blank">
+                    <div class="outline_button block">
+                        <img src="../../media/blender-icon-black.svg"/>
+                        <div>get blender 2.79</div>
+                        <div class="center_right">download page<img class="icon_20" src="../../media/paper-clip-black.svg" ></div>
+                    </div>
+                </a>
+                <a href="http://localhost:8000/BVTK/download/index.html" target="_blank">
+                    <div class="outline_button block" style="padding-left: 14px">
+                        <img src="../../media/icon-logo-black.svg"/>
+                        <div>get BVTK.zip</div>
+                        <div class="center_right">download page<img class="icon_20" src="../../media/paper-clip-black.svg" ></div>
+                    </div>
+                </a>
+                <div class="ver_s_10"></div>
+                <div class="paragraph">
+                    Once you have it, you can install Blender. It shouldn't be hard, but in case you need help,
+                    there's a complete guide <a class="underline" href="https://docs.blender.org/manual/en/latest/getting_started/installing/index.html">here</a>
+                    to solve any doubt. Before proceeding open Blender and make sure it's running without any problems.
                 </div>
             </div>
-            <div class="chapter"><div class="chapter_title" id="ch2">2. Download</div>
+            <div class="chapter"><div class="chapter_title" id="ch2">2. Install the add-on</div>
                 <div class="paragraph">
-                    Obviously to update the add-on you'll have to download the latest version of the add-on from <a class="underline" href="http://lorenzocelli.me/BVTK/download/index.html">here</a>.
-                    You will get a zipped folder: don't unzip it, leave it as it is. If you want to find the .zip more easily later you can move it to the location you prefer.
-                </div>
-            </div>
-            <div class="chapter"><div class="chapter_title" id="ch3">3. Remove the previous version</div>
-                <div class="paragraph">
-                    <div class="list_box"><div class="list_point"></div> Open blender from the terminal.</div>
+                    Since the following is the standard procedure to install every Blender add-on, you can
+                    find online plenty of similar (and probably more detailed) guides about how to do it.
+                    For example, if you prefer you may watch this <a target="_blank" href="https://www.youtube.com/watch?v=0v9JOEaVJu4" class="underline">video</a>
+                    on Youtube.
+                    <div class="list_box"><div class="list_point"></div>
+                        Open Blender
+                    </div>
                     <div class="list_box"><div class="list_point"></div> In the top bar choose
                         <div class="interactive_mark">
                             File > User Preferences
@@ -84,55 +104,60 @@
                             <div class="interactive_content"><img src="media/add-ons-pref.png"></div>
                         </div> section.
                     </div>
-                    <div class="list_box"><div class="list_point"></div> Locate the
-                        <div class="interactive_mark">
-                            search field
-                            <div class="interactive_content"><img src="media/add-on-search.png"></div>
-                        </div> near the top left corner of the window and type in 'BVTK'.
-                    </div>
-                    <div class="list_box"><div class="list_point"></div> Now you should be able to click the
-                        <div class="interactive_mark">
-                            expand arrow
-                            <div class="interactive_content"><img src="media/add-on-expand-arrow.png"></div>
-                        </div> next to the name.
-                    </div>
-                    <div class="list_box"><div class="list_point"></div> Now just click the
-                        <div class="interactive_mark">
-                            remove
-                            <div class="interactive_content w_100"><img src="media/add-on-remove.png"></div>
-                        </div> button. Then confirm by clicking OK.
-                    </div>
-                </div>
-            </div>
-            <div class="chapter"><div class="chapter_title" id="ch4">4. Install the new version</div>
-                <div class="paragraph">
-                    <div class="list_box"><div class="list_point"></div> Still on the preferences window, click
+                    <div class="list_box"><div class="list_point"></div> In the bottom part of the window, click
                         <div class="interactive_mark">
                             Install Add-on from File...
                             <div class="interactive_content"><img src="media/add-on-install.png"></div>
                         </div>.
                     </div>
-                    <div class="list_box"><div class="list_point"></div> Search among your files for the zip previously downloaded, then click once again
+                    <div class="list_box"><div class="list_point"></div> Search among your files for the BVTK.zip file previously downloaded, then click once again
                         <div class="interactive_mark">
                             Install Add-on from File...
                             <div class="interactive_content"><img src="media/add-on-install-file.png"></div>
-                        </div> near the top right corner of the window.
+                        </div> near the top right corner of the window. You should see BVTK appearing in the
+                        add-on list. Before going further, make sure you are connected to the internet, or the
+                        next step will fail. Note that you won't need the access to the web every time you
+                        use the software but just during this installation process.
                     </div>
-                    <div class="list_box"><div class="list_point"></div> Then click on the
+                    <div class="list_box"><div class="list_point"></div> Click on the
                         <div class="interactive_mark">
                             checkbox
                             <div class="interactive_content"><img src="media/add-on-check.png"></div>
-                        </div> next to the add-on name. You may have to wait a few seconds.
+                        </div> next to the add-on name. You may have to wait a few seconds since
+                        at this point the actual installation will secretly start in background.
+                        If the tick after a while simply appears, the add-on has been successfully
+                        installed. Alternatively, a webpage should pop up with a few indications
+                        about how to solve your error.
                     </div>
                     <div class="list_box"><div class="list_point"></div> In the bottom left of the window click on
                         <div class="interactive_mark">
                             save user settings
                             <div class="interactive_content w_180"><img src="media/save-settings.png"></div>
-                        </div>.
+                        </div>. By doing this you'll enable the add-on once for all and you won't have to enable
+                        it each time you open Blender, which is annoying and confusing if you are new to the
+                        software.
                     </div>
-                    <div class="list_box">
-                        <div class="list_point"></div> Take a look at the terminal. If you don't see any errors, you've successfully updated BVTK.
-                    </div>
+                </div>
+            </div>
+            <div class="chapter"><div class="chapter_title" id="ch3">3. Load data</div>
+                <div class="paragraph">
+                    Now it's time to select your file and bring your data into blender <br/>
+                    <div class="list_point"></div> Search the tree for the netCDFCFReader node and find the
+                    <div class="interactive_mark">
+                        FileName
+                        <div class="interactive_content"><!--
+                         --><img src="media/file-name.png"></div></div> property.
+                    <br/>
+                    <div class="list_point"></div> Click the button next to the input field, with the folder icon.<br/>
+                    <div class="list_point"></div> Navigate the file picker and choose your file.<br/>
+                    <div class="list_point"></div> Search the tree for the toBlender node and find the <div class="interactive_mark">
+                    Update
+                    <div class="interactive_content"><!--
+                         --><img src="media/update.png"></div>
+                    </div> button.<br/>
+                    <div class="list_point"></div> Click the button, you should see the nodes changing color. Look in the console and make sure
+                    no errors are raising. At the end of the process, you should see the 3D view updating. However note that if you downloaded the
+                    netCDF file from this page you won't probably see any change. Now that you know how, you can open your own data.
                 </div>
             </div>
         </div>
