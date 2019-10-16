@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/index.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/download/index.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/guides/index.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/guides/get-started/install.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/guides/get-started/update.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/guides/net-cdf/open.html</loc>
+    </url>
+    <url>
+        <loc>http://lorenzocelli.me/BVTK/presets/index.html</loc>
+    </url>
+</urlset>
