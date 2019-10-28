@@ -83,9 +83,21 @@ a{
     font-family: AppleGaramond-Regular, serif;
     font-size: 23px;
     -webkit-font-smoothing: antialiased;
-    transform: scaleX(1.1);
-    letter-spacing: 0.5pt;
+    letter-spacing: 1.3pt;
     display: inline-block;
+}
+
+.title_light{
+    font-family: AppleGaramond-Light, serif;
+    font-size: 23px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1.3pt;
+    display: inline-block;
+}
+
+.paragraph{
+    font-family: 'Krub', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ------------------------------------------------------------------------------
@@ -107,4 +119,24 @@ a{
 }
 .v_20{
     height: 20px;
+}
+
+/* horizontal spaces */
+.h_5, .h_30, .h_20, .h_40, .h_100{
+    display: inline-block;
+}
+.h_100{
+    width: 100px;
+}
+.h_40{
+    width: 40px;
+}
+.h_30{
+    width: 30px;
+}
+.h_20{
+    width: 20px;
+}
+.h_5{
+    width: 5px;
 }

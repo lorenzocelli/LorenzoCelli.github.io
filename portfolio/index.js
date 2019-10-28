@@ -82,6 +82,6 @@ $( document ).ready(function() {
             }
         }
 
-        $(video).append("<source type='video/mp4' src='" + source[1] + "' />");
+        $(video).prepend("<source type='video/mp4' src='" + source[1] + "' />");
     })
 });
