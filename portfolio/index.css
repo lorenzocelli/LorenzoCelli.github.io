@@ -1,0 +1,117 @@
+
+.main_box{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.image_box{
+    display: inline-block;
+    /*height: 400px;*/
+    background-color: #030303;
+    border: 1px solid #333333;
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.image_box > div{
+    width: 100%;
+    height: 100%;
+}
+
+.image_box > div > img, .image_box > div > video{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.image_box > div > .description{
+    display: none;
+}
+
+.title{
+    margin: 0;
+    font-size: 15px;
+}
+
+#name_title{
+    /*float: left;*/
+    vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------------------
+    INTERACTIVE ELEMENTS
+------------------------------------------------------------------------------ */
+
+/* slider */
+
+.slider{
+    position: relative;
+}
+
+.slider .text{
+    position: relative;
+
+    background-color: #050505;
+    border-left: 1px solid #0b0b0b;
+    border-right: 1px solid #0b0b0b;
+
+    border-radius: 5px;
+    letter-spacing: 1pt;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    font-family: 'Krub', sans-serif;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 13px;
+    width: 350px;
+    vertical-align: middle;
+}
+
+#slider_text {
+    padding: 10px 20px;
+    transition: opacity 200ms;
+}
+
+.arrow{
+    vertical-align: middle;
+    display: inline-block;
+    width: 7px;
+    cursor: pointer;
+    transition: transform 100ms;
+}
+
+.arrow:hover{
+    transform: scale(1.3);
+}
+
+@media only screen and (max-width: 680px) {
+    .main_box{
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+        box-sizing: border-box;
+        position: relative;
+        text-align: left;
+    }
+    .slider{
+        text-align: center;
+    }
+    .slider > .center_left{
+        display: block;
+        position: relative;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slider > .text{
+        margin: 0 8px;
+        width: 250px;
+        font-size: 12px;
+    }
+    #slider_text{
+        padding: 5px;
+    }
+}
