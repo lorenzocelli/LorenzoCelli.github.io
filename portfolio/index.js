@@ -39,7 +39,7 @@ $( document ).ready(function() {
     next_image();
 
     $("#right_arrow").on("click", next_image);
-    $("#left_arrow").on("click", last_image)
+    $("#left_arrow").on("click", last_image);
 
     /* ------------------------------------------------------------------------------
         Video loader
@@ -54,6 +54,11 @@ $( document ).ready(function() {
             "co2_volumetric" : [
                 [1080, "media/co2-volumetric/1080.mp4"],
                 [1920, "media/co2-volumetric/1920.mp4"]
+            ],
+            "co2_volumetric_2" : [
+                [500, "media/co2-volumetric-2/500.mp4"],
+                [1080, "media/co2-volumetric-2/1080.mp4"],
+                [1920, "media/co2-volumetric-2/1920.mp4"]
             ]
     };
 
