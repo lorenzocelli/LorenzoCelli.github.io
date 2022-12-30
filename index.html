@@ -1,35 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lorenzo Celli</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Krub:200&display=swap" rel="stylesheet">
+---
+layout: default
+title: Home
+---
 
-    <style>
-        .center_h_v {
-            position: fixed;
-            text-align: center;
-        }
-        .justified_buttons{
-            width: 129px;
-            line-height: 10px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
+<p>
+Hello! Welcome to my website. Here you will find some stuff
+about me.
+</p>
 
-<div class="center_h_v">
-    <p class="title">Lorenzo Celli</p>
-    <div class="justified_buttons">
-        <a style="margin-bottom: 1px" href="media/celli-cv.pdf">c u r r i c u l u m</a>
-        <a href="portfolio/index.html">p o r t f o l i o</a>
-        <a href="contacts/index.html">c o n t a c t s</a>
+<hr/>
+
+<h5 class="mb-3">Blog</h5>
+
+{% for post in site.posts %}
+
+<div class="card w-100 mb-3" style="width: 18rem;">
+    <div class="card-body">
+        <div class="d-flex flex-row">
+            <div class="me-1">
+                <a class="stretched-link link-unstyled" href="{{ post.url }}">
+                    <b class="card-title"> {{ post.title | capitalize}} </b>
+                </a>
+            </div>
+            <div>/ {{ post.date | date_to_string }}</div>
+        </div>
+        <div class="card-text"> {{ post.description }} </div>
     </div>
 </div>
-
-</body>
-</html>
+    
+{% endfor %}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter&family=Libre+Baskerville&family=Libre+Franklin&display=swap');
+
+/*
+    'IBM Plex Sans'
+    'Inter'
+    'Libre Franklin'
+    'Libre Baskerville'
+*/
+$font-family-base: 'IBM Plex Sans';
+
+/* regular font weight for titles */
+$headings-font-weight: 400;
+
+@import 'bootstrap/bootstrap';
+
+.main-serif {
+    font-family: 'Libre Baskerville', $font-family-sans-serif;
+}
+
+.main-container {
+    max-width: 600px;
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+    color: inherit;
+  }

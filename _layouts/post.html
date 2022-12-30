@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<!-- MathJax start -->
+
+<script>
+    MathJax = {
+        tex: {
+            tags: 'ams'
+        }
+    };
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- MathJax end -->
+
+<h3>{{ page.title | capitalize }}</h3>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+
+{{ content }}

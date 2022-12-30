@@ -1,6 +1,0 @@
-# robots.txt for http://lorenzocelli.me/
-
-User-agent: *
-Disallow:
-
-Sitemap: http://lorenzocelli.me/sitemap.xml
