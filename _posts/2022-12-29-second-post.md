@@ -1,7 +1,6 @@
 ---
 layout: post
 author: lorenzo
-description: This is just a test post and there is nothing very special to it.
 ---
 This is just a test post and there is nothing very special to it.
 

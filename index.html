@@ -24,7 +24,7 @@ about me.
             </div>
             <div>/ {{ post.date | date_to_string }}</div>
         </div>
-        <div class="card-text"> {{ post.description }} </div>
+        <div class="card-text"> {{ post.excerpt | strip_html }} </div>
     </div>
 </div>
     

@@ -1,9 +1,8 @@
 ---
 layout: post
 author: lorenzo
-description: This is just a test post and there is nothing very special to it.
 ---
-This is just a test post and there is nothing very special to it.
+This is just a test post and there is nothing very special to it. This post has some math in it.
 
 When $$a \ne 0$$, there are two solutions to $$ax^2 + bx + c = 0$$ and they are:
 
