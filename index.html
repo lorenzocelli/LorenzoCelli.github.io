@@ -3,18 +3,18 @@ layout: default
 title: Home
 ---
 
-<p>
 Hello! Welcome to my website. Here you will find some stuff
 about me.
-</p>
 
-<hr/>
+<div class="d-grid my-3">
+    <a href="/cv.html" class="border border-1 p-2 link-empty rounded-1 bs-enhance">Curriculum Vitae</a>
+</div>
 
 <h5 class="mb-3">Blog</h5>
 
 {% for post in site.posts %}
 
-<div class="card w-100 mb-3" style="width: 18rem;">
+<div class="card w-100 mb-3 rounded-1" style="width: 18rem;">
     <div class="card-body">
         <div class="d-flex flex-row">
             <div class="me-1">
@@ -27,5 +27,5 @@ about me.
         <div class="card-text"> {{ post.excerpt | strip_html }} </div>
     </div>
 </div>
-    
+
 {% endfor %}

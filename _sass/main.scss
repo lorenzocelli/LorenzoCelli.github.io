@@ -8,8 +8,9 @@
 */
 $font-family-base: 'IBM Plex Sans';
 
-/* regular font weight for titles */
-$headings-font-weight: 400;
+/* light font weight for titles */
+$headings-font-weight: 300;
+$btn-font-weight: 300;
 
 @import 'bootstrap/bootstrap';
 
@@ -23,4 +24,19 @@ $headings-font-weight: 400;
 
 .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
     color: inherit;
-  }
+}
+
+.link-empty, .link-empty:link, .link-empty:hover {
+    @extend .link-unstyled;
+    text-decoration: none;
+}
+
+.border.bs-enhance {
+
+    transition: border-left-width 0.2s ease-in-out;
+}
+
+.border.bs-enhance:hover {
+
+    border-left-width: 5px !important;
+}

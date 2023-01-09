@@ -1,5 +1,8 @@
 title: lorenzocelli.me
 
+collections:
+  - cv_items # curriculum vitae
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

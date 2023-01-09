@@ -6,7 +6,7 @@
     'Libre Franklin'
     'Libre Baskerville'
 */
-/* regular font weight for titles */
+/* light font weight for titles */
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -220,7 +220,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: var(--bs-heading-color, inherit);
 }
@@ -2870,7 +2870,7 @@ textarea.form-control-lg {
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 400;
+  --bs-btn-font-weight: 300;
   --bs-btn-line-height: 1.5;
   --bs-btn-color: #212529;
   --bs-btn-bg: transparent;
@@ -11624,8 +11624,20 @@ textarea.form-control-lg {
   max-width: 600px;
 }
 
-.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+.link-unstyled, .link-empty, .link-empty:link, .link-empty:hover, .link-unstyled:link, .link-unstyled:hover {
   color: inherit;
+}
+
+.link-empty, .link-empty:link, .link-empty:hover {
+  text-decoration: none;
+}
+
+.border.bs-enhance {
+  transition: border-left-width 0.2s ease-in-out;
+}
+
+.border.bs-enhance:hover {
+  border-left-width: 5px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
