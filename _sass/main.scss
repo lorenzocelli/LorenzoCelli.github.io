@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter&family=Libre+Baskerville&family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
 
 /*
     'IBM Plex Sans'
     'Inter'
     'Libre Franklin'
     'Libre Baskerville'
+    'Fraunces'
 */
 $font-family-base: 'IBM Plex Sans';
 
@@ -15,7 +17,7 @@ $btn-font-weight: 300;
 @import 'bootstrap/bootstrap';
 
 .main-serif {
-    font-family: 'Libre Baskerville', $font-family-sans-serif;
+    font-family: 'Fraunces', $font-family-sans-serif; 
 }
 
 .main-container {
@@ -39,4 +41,14 @@ $btn-font-weight: 300;
 .border.bs-enhance:hover {
 
     border-left-width: 5px !important;
+}
+
+.border-bottom.bs-enhance {
+
+    transition: border-bottom-width 0.2s ease-in-out;
+}
+
+.border-bottom.bs-enhance:hover {
+
+    border-bottom-width: 5px !important;
 }
