@@ -17,7 +17,7 @@ interested in computer graphics and related fields. I was born and raised in Bol
 Italy, where I currently live and work.
 </p>
 
-<div class="d-flex align-items-center">
+<div class="d-flex align-items-center mt-4">
     <img class="d-print-none me-2" src="assets/images/icons/wrench.svg" height="30px" />
     <h5>Work experience</h5>
 </div>
@@ -43,7 +43,7 @@ Italy, where I currently live and work.
 {% endunless %}
 {% endfor %}
 
-<div class="d-flex align-items-center mt-3">
+<div class="d-flex align-items-center mt-4">
     <img class="d-print-none me-2" src="assets/images/icons/book.svg" height="30px" />
     <h5>Education</h5>
 </div>
@@ -51,7 +51,7 @@ Italy, where I currently live and work.
 {% assign sorted_items = site.cv_items | sort: "period" | reverse %}
 {% for item in sorted_items %}
 {% if item.academic %}
-<div class="cv-card mt-3">
+<div class="cv-card mt-4">
     <div class="border-start border-1 ps-3 mb-3">
         <span class="h6">{{ item.title }}</span> {{ item.institution }}
         <br/>
@@ -62,7 +62,7 @@ Italy, where I currently live and work.
 {% endif %}
 {% endfor %}
 
-<div class="d-flex align-items-center mt-3">
+<div class="d-flex align-items-center mt-4">
     <img class="d-print-none me-2" src="assets/images/icons/puzzle.svg" height="30px" />
     <h5>Skills</h5>
 </div>
