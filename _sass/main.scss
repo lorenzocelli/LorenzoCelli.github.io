@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter&family=Libre+Baskerville&family=Libre+Franklin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 /*
     'IBM Plex Sans'
@@ -16,6 +17,10 @@ $btn-font-weight: 300;
 
 @import 'bootstrap/bootstrap';
 @import 'icons/bootstrap-icons';
+
+:root {
+    --bs-font-monospace: 'Fira Code', monospace;;
+}
 
 .main-serif {
     font-family: 'Fraunces', $font-family-sans-serif; 

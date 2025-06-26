@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<h3>{{ page.title | capitalize }}</h3>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+
+{{ content }}
+
 <!-- MathJax start -->
 
 <script>
@@ -18,7 +23,10 @@ layout: default
 
 <!-- MathJax end -->
 
-<h3>{{ page.title | capitalize }}</h3>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<!-- HighlightJs start -->
 
-{{ content }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<!-- HighlightJs end -->
