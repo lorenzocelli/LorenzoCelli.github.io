@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
     'IBM Plex Sans'
@@ -11,15 +12,45 @@
 */
 $font-family-base: 'IBM Plex Sans';
 
+
+// Stone
+$gray-900: #171717;
+$gray-800: #3c3b3a;
+$gray-700: #656361;
+$gray-600: #928e8b;
+$gray-500: #c1bcb7;
+$white:    #fff9f4;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/helios.css');
+
+/*
+$gray-900:#080a0e;
+$gray-800:#33343b;
+$gray-700:#5e5f68;
+$gray-600:#898a95;
+$gray-500:#b4b5c3;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.css');
+*/
+
+$code-color-dark: $gray-500;
+
+$font-size-base:              1rem;
+$h1-font-size:                $font-size-base * 1.75;
+$h2-font-size:                $font-size-base * 1.4;
+$h3-font-size:                $font-size-base * 1.3;
+$h4-font-size:                $font-size-base * 1.2;
+$h5-font-size:                $font-size-base * 1.1;
+$h6-font-size:                $font-size-base;
+
 /* light font weight for titles */
-$headings-font-weight: 300;
-$btn-font-weight: 300;
+$headings-font-weight: 400;
 
 @import 'bootstrap/bootstrap';
 @import 'icons/bootstrap-icons';
 
 :root {
-    --bs-font-monospace: 'Fira Code', monospace;;
+    --bs-font-monospace: 'Fira Code', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main-serif {
@@ -30,31 +61,59 @@ $btn-font-weight: 300;
     max-width: 600px;
 }
 
-.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+a {
     color: inherit;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+a:hover {
+    color: $white;
 }
 
 .link-empty, .link-empty:link, .link-empty:hover {
-    @extend .link-unstyled;
     text-decoration: none;
 }
 
-.border.bs-enhance {
-
-    transition: border-left-width 0.2s ease-in-out;
+.border-start.bs-enhance {
+    transition: border-left-width 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.border.bs-enhance:hover {
-
+.border-start.bs-enhance:hover {
+    color: $white;
     border-left-width: 5px !important;
 }
 
 .border-bottom.bs-enhance {
-
     transition: border-bottom-width 0.2s ease-in-out;
 }
 
 .border-bottom.bs-enhance:hover {
-
     border-bottom-width: 5px !important;
+}
+
+$headings-font: 'Libre Franklin', $font-family-sans-serif;
+
+.h {
+    color: $white;
+    font-family: $headings-font;
+    font-weight: $headings-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font;
+    font-weight: $headings-font-weight;
+}
+
+h2 {
+    @extend .mt-4;
+}
+
+// Post list item in homepage
+.blog-post {
+    transition: transform 0.2s ease-in-out;
+}
+
+.blog-post:hover {
+    transform: translateX(5px);
 }

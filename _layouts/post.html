@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<h3>{{ page.title | capitalize }}</h3>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<h1 class="gruvbox">{{ page.title }}</h1>
+<p class="mb-4">{{ page.date | date_to_string }}</p>
 
 {{ content }}
 
@@ -13,19 +13,19 @@ layout: default
     MathJax = {
         tex: {
             tags: 'ams'
+        },
+        chtml: {
+            matchFontHeight: false
         }
     };
 </script>
 
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js">
-</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <!-- MathJax end -->
 
 <!-- HighlightJs start -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 
 <!-- HighlightJs end -->

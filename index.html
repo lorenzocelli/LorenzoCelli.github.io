@@ -3,36 +3,35 @@ layout: default
 title: Home
 ---
 
-Hello! Welcome to my website. Here you will find some stuff
-about me.
 
 <div class="d-grid my-3">
-    <a href="/cv.html" class="border border-1 p-2 link-empty rounded-1 bs-enhance mb-2">
+    <a href="/cv.html" class="border-start px-2 link-empty bs-enhance mb-2">
         <i class="bi bi-file-earmark-text d-inline-block me-2"></i>Curriculum Vitae
     </a>
-    <a href="https://github.com/lorenzocelli" class="border border-1 p-2 link-empty rounded-1 bs-enhance">
-        <i class="bi bi-github  d-inline-block me-2"></i>&nbsp;GitHub
+    <a href="https://github.com/lorenzocelli" class="border-start px-2 link-empty bs-enhance mb-2">
+        <i class="bi bi-github d-inline-block me-2"></i>&nbsp;GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/lorenzo-celli/" class="border-start px-2 link-empty bs-enhance">
+        <i class="bi bi-linkedin d-inline-block me-2"></i>&nbsp;Linkedin
     </a>
 </div>
 
-<h5 class="mb-3">Blog</h5>
-
-Work in progress!
+<div class="mt-5 mb-3"> Blog </div>
 
 {% for post in site.posts %}
+{% unless post.hidden %}
 
-<div class="card w-100 mb-3 rounded-1 invisible" style="width: 18rem;">
-    <div class="card-body">
-        <div class="d-flex flex-row">
-            <div class="me-1">
-                <a class="stretched-link link-unstyled" href="{{ post.url }}">
-                    {{ post.title | capitalize}}
-                </a>
-            </div>
-            <div>/ {{ post.date | date_to_string }}</div>
+<div class="blog-post w-100 mb-3 rounded-1" style="cursor: pointer" onclick="location.href='{{ post.url }}';">
+    <div class="d-flex flex-row">
+        <div>
+            <a class="h link-empty" href="{{ post.url }}">
+                {{ post.title }}
+            </a>
         </div>
-        <div class="card-text"> {{ post.excerpt | strip_html }} </div>
+        <div>&nbsp;{{ post.date | date_to_string }}</div>
     </div>
+    <div class="fs-6"> {{ post.excerpt | strip_html }} </div>
 </div>
 
+{% endunless %}
 {% endfor %}
