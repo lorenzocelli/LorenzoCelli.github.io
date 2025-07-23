@@ -142,7 +142,7 @@ cargo new rust-lin-reg
 
 Now we have a skeleton project that we can modify. We need to add the required libraries (or 'Crates' as they are called in Rust) to the `Cargo.toml` file. We will need the `csv` crate to read the data from a csv file, the `ndarray` crate to handle matrices and vectors, and the `ndarray-linalg` crate to solve a linear system (we will see later why we need it).
 
-<pre><code quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/Cargo.toml">
+<pre><code data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/Cargo.toml">
 </code></pre>
 
 That's all we need for this project in terms of dependencies!
@@ -153,34 +153,34 @@ For this project we are going to use the `Advertising.csv` dataset from the reso
 
 In our `main.rs` file, we add `use` declarations for the components we need:
 
-<pre><code class="language-rust" quote-lines="1-5" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="1-5" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 To read the csv file with Rust, we define a `Record` type which describes the structure of a single data row. Note that this is tailored to the Advertising dataset, so you will need to change it if you are using a different one.
 
-<pre><code class="language-rust" quote-lines="7-7" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="7-7" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 Now we can read the csv file and parse it into a vector of `Record` structs.
 
-<pre><code class="language-rust" quote-lines="17-25" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="17-25" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 Now we have all our data stored in a vector. However, we still want to convert it to a `ndarray` which gives us access to high-perfomance linear algebra operations. For the single-variable case, we will have two 1d arrays: we will use the 'TV' attribute to predict the 'sales' attribute.
 
-<pre><code class="language-rust" quote-lines="27-36" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="27-36" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 ## Linear Regression and RSE in Rust
 
 We are ready to perform the actual linear regression and find \\(\beta_0\\) and \\(\beta_1\\). To do so, let's create a function that accepts two arrays of floats and returns the coefficients as a tuple of floats. All we need to do is turning equation \\(\ref{coeff-single-var}\\) into Rust code.
 
-<pre><code class="language-rust" quote-lines="66-80" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="66-80" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 That's it. Now we can call this function with our data and print the results.
 
-<pre><code class="language-rust" quote-lines="38-40" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="38-40" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 We also want to compute and print a metric to evaluate the performance of our model. A common metric for linear regression is the Residual Standard Error (RSE), which is defined as:
@@ -191,12 +191,12 @@ $$
 
 Let's write a function to compute the RSE given the predictions and the actual values:
 
-<pre><code class="language-rust" quote-lines="94-98" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="94-98" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 We can now call this function to print the RSE of our model:
 
-<pre><code class="language-rust" quote-lines="43-44" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="43-44" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 That's it for the simple case! We can execute the program with `cargo run` and it should print the following output:
@@ -218,19 +218,19 @@ $$
 
 Now all we need to do to compute the coefficients is to compute the matrices \\(A\\) and \\(b\\) and feed them to the Cholesky solver. Here's how we can do this in Rust:
 
-<pre><code class="language-rust" quote-lines="82-92" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="82-92" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 Adding a small constant to the diagonal of \\(A\\) is a common trick used to improve numerical stability when \\(A\\) is near-singular, known as [Tikhonov regularization](https://en.wikipedia.org/wiki/Ridge_regression) or Ridge regression.
 
 Now that we have a method for multiple linear regression, we can put it to the test. The following code extracts the 'TV', 'radio', and 'newspaper' attributes from the dataset, computes the coefficients, and prints them:
 
-<pre><code class="language-rust" quote-lines="46-57" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="46-57" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 We can also compute and print the RSE for the multiple linear regression model using the same function we defined earlier:
 
-<pre><code class="language-rust" quote-lines="59-61" quote-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
+<pre><code class="language-rust" data-lines="59-61" data-src="https://raw.githubusercontent.com/lorenzocelli/rust-lin-reg/refs/heads/master/src/main.rs">
 </code></pre>
 
 If you `cargo run`, you should get the following output:
