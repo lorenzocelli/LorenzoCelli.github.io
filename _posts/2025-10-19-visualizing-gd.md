@@ -5,7 +5,15 @@ title: "Visualizing Gradient Descent with WebGL"
 hidden: true
 ---
 
-<canvas id="canvas" style="width: 100%; border-radius: 4px;"></canvas>
+<div class="bg-dark-800 rounded-1">
+    <canvas id="canvas" style="width: 100%; border-radius: 4px;"></canvas>
+    <div class="p-2">
+        X:
+        <input value="-0.5" class="w-16 color-dark-100 bg-dark-700 border-x-0 border-b-1 border-t-0 focus_border-white outline-none">
+        Y:
+        <input value="0.9" class="w-16 color-dark-100 bg-dark-700 border-x-0 border-b-1 border-t-0 focus_border-white outline-none">
+    </div>
+</div>
 
 <script src="/assets/js/plot2d.js"></script>
 

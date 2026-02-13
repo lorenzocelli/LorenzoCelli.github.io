@@ -165,7 +165,7 @@ const pos = {...start};
 var p0 = gl.getUniformLocation(program, "p_0");
 gl.uniform2f(p0, pos.x, pos.y);
 
-// Set trail uniform (array of 10 vec2)
+// Set trail uniform (array of vec2)
 var trailLoc = gl.getUniformLocation(program, "trail");
 var trailArray = [];
 for (let i = 0; i < historyLength; ++i) {

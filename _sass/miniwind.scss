@@ -1,0 +1,119 @@
+@use 'sass:list';
+
+$spacing: .25rem;
+
+$colors: (
+    "white": (#fff),
+    "dark": (
+        oklch(0.97 0.001 106.424),
+        oklch(0.923 0.003 48.717),
+        oklch(0.869 0.005 56.366),
+        oklch(0.709 0.01 56.259),
+        oklch(0.553 0.013 58.071),
+        oklch(0.444 0.011 73.639),
+        oklch(0.374 0.01 67.558),
+        oklch(0.268 0.007 34.298),
+        oklch(0.216 0.006 56.043),
+        oklch(0.147 0.004 49.25),
+    ),
+    "red": (
+        oklch(0.936 0.032 17.717),
+        oklch(0.885 0.062 18.334),
+        oklch(0.808 0.114 19.571),
+        oklch(0.704 0.191 22.216),
+        oklch(0.637 0.237 25.331),
+        oklch(0.577 0.245 27.325),
+        oklch(0.505 0.213 27.518),
+        oklch(0.444 0.177 26.899),
+        oklch(0.396 0.141 25.723),
+        oklch(0.258 0.092 26.042)
+    )
+);
+
+$rounded-size: (
+    'xs': 0.125rem,
+    'sm': 0.25rem,
+    'md': 0.375rem,
+    'lg': 0.5rem,
+    'xl': 0.75rem,
+    '2xl': 1rem,
+    '3xl': 1.5rem,
+    '4xl': 2rem,
+    'full': calc(infinity * 1px),
+    'none': 0
+);
+
+@each $s in &, 'focus', 'hover' {
+  @each $name, $list in $colors
+  {
+      @if (list.length($list) == 1) or (list.length($list) == 10) {
+        @for $i from 1 to list.length($list) + 1 {
+            .#{if($s, '#{$s}_', '')}bg-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                background-color: list.nth($list, $i),
+            }
+            .#{if($s, '#{$s}_', '')}border-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                border-color: list.nth($list, $i),
+            }
+            .#{if($s, '#{$s}_', '')}color-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                color: list.nth($list, $i),
+            }
+        }
+      }
+      @else {
+        @error "Color lists must have either 1 or 10 items.";
+      }
+  }
+}
+
+@for $i from 0 to 10 {
+    .border-#{$i} {
+        border-width: #{$i}px;
+    }
+
+    .border-b-#{$i} {
+        border-bottom-width: #{$i}px;
+    }
+
+    .border-t-#{$i} {
+        border-top-width: #{$i}px;
+    }
+
+    .border-l-#{$i} {
+        border-left-width: #{$i}px;
+    }
+
+    .border-r-#{$i} {
+        border-right-width: #{$i}px;
+    }
+
+    .border-x-#{$i} {
+        border-left-width: #{$i}px;
+        border-right-width: #{$i}px;
+    }
+
+    .border-y-#{$i} {
+        border-top-width: #{$i}px;
+        border-bottom-width: #{$i}px;
+    }
+}
+
+@each $style in solid, dashed, dotted, double, none, hidden {
+    .outline-#{$style} {
+        outline-style: $style;
+    }
+}
+
+@for $i from 0 to 20 {
+    .w-#{$i} {
+        width: calc($i * $spacing);
+    }
+    .p-#{$i} {
+        padding: calc($i * $spacing);
+    }
+}
+
+@each $key, $size in $rounded-size {
+    .rounded-#{$key} {
+        border-radius: #{$size};
+    }
+}
