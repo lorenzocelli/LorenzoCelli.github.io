@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $spacing: .25rem;
 
 $colors: (
@@ -44,16 +46,16 @@ $rounded-size: (
 @each $s in &, 'focus', 'hover' {
   @each $name, $list in $colors
   {
-      @if (length($list) == 1) or (length($list) == 10) {
-        @for $i from 1 to length($list) + 1 {
-            .#{if($s, '#{$s}_', '')}bg-#{$name}#{if(length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
-                background-color: nth($list, $i),
+      @if (list.length($list) == 1) or (list.length($list) == 10) {
+        @for $i from 1 to list.length($list) + 1 {
+            .#{if($s, '#{$s}_', '')}bg-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                background-color: list.nth($list, $i),
             }
-            .#{if($s, '#{$s}_', '')}border-#{$name}#{if(length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
-                border-color: nth($list, $i),
+            .#{if($s, '#{$s}_', '')}border-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                border-color: list.nth($list, $i),
             }
-            .#{if($s, '#{$s}_', '')}color-#{$name}#{if(length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
-                color: nth($list, $i),
+            .#{if($s, '#{$s}_', '')}color-#{$name}#{if(list.length($list) > 1, '-#{$i}00', '')}#{if($s, ':#{$s}', '')} {
+                color: list.nth($list, $i),
             }
         }
       }
